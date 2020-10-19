@@ -61,63 +61,63 @@ public class SudokuSolver {
 
         // check 1 block
         if (row >= 0 && col >= 0 && row <= 2 && col <= 2){
-           if(!isBlockValid(n, row, col, board, 0, 2,0,2)){
+           if(!isBlockValid(n, row, col, board, 0, 2, 0, 2)){
                return false;
            }
         }
 
         // check 2 block
         if (row >= 0 && col >= 3 && row <= 2 && col <= 5){
-            if(!isBlockValid(n, row, col, board, 0, 2,3,5)){
+            if(!isBlockValid(n, row, col, board, 0, 2, 3, 5)){
                 return false;
             }
         }
 
         // check 3 block
         if (row >= 0 && col >= 6 && row <= 2 && col <= 8){
-            if(!isBlockValid(n, row, col, board, 0, 2,6,8)){
+            if(!isBlockValid(n, row, col, board, 0, 2, 6, 8)){
                 return false;
             }
         }
 
         // check 4 block
         if (row >= 3 && col >= 0 && row <= 5 && col <= 2){
-            if(!isBlockValid(n, row, col, board, 3, 5,0,2)){
+            if(!isBlockValid(n, row, col, board, 3, 5, 0, 2)){
                 return false;
             }
         }
 
         // check 5 block
         if (row >= 3 && col >= 3 && row <= 5 && col <= 5){
-            if(!isBlockValid(n, row, col, board, 3, 5, 3,5)){
+            if(!isBlockValid(n, row, col, board, 3, 5, 3, 5)){
                 return false;
             }
         }
 
         // check 6 block
         if (row >= 3 && col >= 6 && row <= 5 && col <= 8){
-            if(!isBlockValid(n, row, col, board, 3, 5,6,8)){
+            if(!isBlockValid(n, row, col, board, 3, 5, 6, 8)){
                 return false;
             }
         }
 
         // check 7 block
         if (row >= 6 && col >= 0 && row <= 8 && col <= 2){
-            if(!isBlockValid(n, row, col, board, 6, 8,0,2)){
+            if(!isBlockValid(n, row, col, board, 6, 8, 0, 2)){
                 return false;
             }
         }
 
         // check 8 block
         if (row >= 6 && col >= 3 && row <= 8 && col <= 5){
-            if(!isBlockValid(n, row, col, board, 6, 8,3,5)){
+            if(!isBlockValid(n, row, col, board, 6, 8, 3, 5)){
                 return false;
             }
         }
 
         // check 9 block
         if (row >= 6 && col >= 6 && row <= 8 && col <= 8){
-            if(!isBlockValid(n, row, col, board, 6, 8,6,8)){
+            if(!isBlockValid(n, row, col, board, 6, 8, 6, 8)){
                 return false;
             }
         }
