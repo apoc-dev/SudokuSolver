@@ -2,7 +2,7 @@ public class SudokuSolver {
 
     private boolean solve(int[][] board, int counter){
 
-        int col = (int) counter / board.length;
+        int col = counter / board.length;
         int row = counter % board.length;
 
         if (col >= board.length){
@@ -26,9 +26,7 @@ public class SudokuSolver {
 
         }
         }else{
-            if (solve(board,counter+1)){
-                return true;
-            }
+            return solve(board, counter + 1);
         }
 
         return false;
@@ -43,7 +41,6 @@ public class SudokuSolver {
     private boolean isValid(int n, int row, int col, int[][] board){
 
         int i;
-        int j;
 
         for (i = 0; i < board.length; i++) {
             if(board[row][i] == n){
@@ -61,10 +58,7 @@ public class SudokuSolver {
 
         final int blockRow = 3 * (row / 3);
         final int blockCol = 3 * (col / 3);
-        if (!isBlockValid(n, board, blockRow, blockRow + 2, blockCol, blockCol + 2))
-            return false;
-
-        return true;
+        return isBlockValid(n, board, blockRow, blockRow + 2, blockCol, blockCol + 2);
     }
 
     private boolean isBlockValid(int n, int[][] board, int starti, int stopi, int startj, int stopj){
